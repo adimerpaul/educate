@@ -14,10 +14,10 @@ export default {
     const token = this.$route.query.token
     // const redirect = this.$route.query.redirect || '/'
     console.log('token recibido en callback:', token)
-    if (!token) {
-      this.$q.notify({ type: 'negative', message: 'Token no presente en el callback' })
-      return this.$router.replace('/login')
-    }
+    // if (!token) {
+    //   this.$q.notify({ type: 'negative', message: 'Token no presente en el callback' })
+    //   return this.$router.replace('/login')
+    // }
     this.$axios.get('/me', {
       headers: {
         Authorization: `Bearer ${token}`
