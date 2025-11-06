@@ -16,10 +16,11 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('username')->nullable();
             $table->string('role')->default('Usuario');
+            $table->string('google_id')->nullable();
             $table->string('avatar')->default('default.png');
             $table->string('email')->nullable();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password')->nullable();
             $table->rememberToken();
             $table->softDeletes();
             $table->timestamps();
