@@ -15,4 +15,6 @@ Route::get('/auth/google/callback', [GoogleController::class, 'callback']);
 Route::middleware('auth:sanctum')->group(callback: function () {
     Route::post('/logout', [App\Http\Controllers\UserController::class, 'logout']);
     Route::get('/me', [App\Http\Controllers\UserController::class, 'me']);
+
+    Route::apiResource('materias', App\Http\Controllers\MateriaController::class);
 });
