@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\TareaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,4 +18,6 @@ Route::middleware('auth:sanctum')->group(callback: function () {
     Route::get('/me', [App\Http\Controllers\UserController::class, 'me']);
 
     Route::apiResource('materias', App\Http\Controllers\MateriaController::class);
+    Route::apiResource('tareas', TareaController::class);
+
 });
