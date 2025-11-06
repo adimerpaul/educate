@@ -3,7 +3,9 @@ const routes = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/IndexPage.vue') }
+      { path: '', component: () => import('pages/IndexPage.vue') },
+    //   http://localhost:9000/auth/callback?token=1|cbFHzKZ2FH19xL0qZhIVVoNf7S9uzab6YWkyy3gC8d7f0da3
+      { path: 'auth/callback', component: () => import('pages/AuthCallback.vue') }
     ]
   },
   {

@@ -28,7 +28,7 @@
             <template v-slot:label>
               <div class="row items-center no-wrap q-gutter-sm">
                 <q-avatar rounded>
-                  <q-img :src="`${$url}/../images/${$store.user.avatar}`" width="40px" height="40px" v-if="$store.user.avatar"/>
+                  <q-img :src="`${$url}/..${$store.user.avatar}`" width="40px" height="40px" v-if="$store.user.avatar"/>
                   <q-icon name="person" v-else />
                 </q-avatar>
                 <div class="text-left" style="line-height: 1">
@@ -42,29 +42,29 @@
               </div>
             </template>
 
-            <q-item clickable v-close-popup>
-              <q-item-section>
-                <q-item-label class="text-grey-7">
-                  Permisos asignados
-                </q-item-label>
-                <q-item-label caption class="q-mt-xs">
-                  <div class="row q-col-gutter-xs" style="min-width: 150px; max-width: 150px;">
-                    <q-chip
-                      v-for="(p, i) in $store.permissions"
-                      :key="i"
-                      dense
-                      color="grey-3"
-                      text-color="black"
-                      size="12px"
-                      class="q-mr-xs q-mb-xs"
-                    >
-                      {{ p }}
-                    </q-chip>
-                    <q-badge v-if="!$store.permissions?.length" color="grey-5" outline>Sin permisos</q-badge>
-                  </div>
-                </q-item-label>
-              </q-item-section>
-            </q-item>
+<!--            <q-item clickable v-close-popup>-->
+<!--&lt;!&ndash;              <q-item-section>&ndash;&gt;-->
+<!--&lt;!&ndash;                <q-item-label class="text-grey-7">&ndash;&gt;-->
+<!--&lt;!&ndash;                  Permisos asignados&ndash;&gt;-->
+<!--&lt;!&ndash;                </q-item-label>&ndash;&gt;-->
+<!--&lt;!&ndash;                <q-item-label caption class="q-mt-xs">&ndash;&gt;-->
+<!--&lt;!&ndash;                  <div class="row q-col-gutter-xs" style="min-width: 150px; max-width: 150px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <q-chip&ndash;&gt;-->
+<!--&lt;!&ndash;                      v-for="(p, i) in $store.permissions"&ndash;&gt;-->
+<!--&lt;!&ndash;                      :key="i"&ndash;&gt;-->
+<!--&lt;!&ndash;                      dense&ndash;&gt;-->
+<!--&lt;!&ndash;                      color="grey-3"&ndash;&gt;-->
+<!--&lt;!&ndash;                      text-color="black"&ndash;&gt;-->
+<!--&lt;!&ndash;                      size="12px"&ndash;&gt;-->
+<!--&lt;!&ndash;                      class="q-mr-xs q-mb-xs"&ndash;&gt;-->
+<!--&lt;!&ndash;                    >&ndash;&gt;-->
+<!--&lt;!&ndash;                      {{ p }}&ndash;&gt;-->
+<!--&lt;!&ndash;                    </q-chip>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <q-badge v-if="!$store.permissions?.length" color="grey-5" outline>Sin permisos</q-badge>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                </q-item-label>&ndash;&gt;-->
+<!--&lt;!&ndash;              </q-item-section>&ndash;&gt;-->
+<!--            </q-item>-->
 
             <q-separator />
 
