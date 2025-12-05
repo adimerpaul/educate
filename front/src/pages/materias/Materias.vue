@@ -54,7 +54,19 @@
           </q-btn-dropdown>
         </td>
         <td>{{ m.id }}</td>
-        <td>{{ m.nombre || '—' }}</td>
+        <td :style="{ backgroundColor: m.color || 'transparent', color: m.color ? '#fff' : 'inherit' }">
+          {{ m.nombre || '—' }}
+<!--          <pre>{{m}}</pre>-->
+<!--          {-->
+<!--          "id": 1,-->
+<!--          "nombre": "Actulizacion Tecnoligca",-->
+<!--          "abreviatura": "SIS2420",-->
+<!--          "docente": null,-->
+<!--          "color": "#F44336",-->
+<!--          "descripcion": null,-->
+<!--          "user_id": 2-->
+<!--          }-->
+        </td>
         <td>{{ m.docente || '—' }}</td>
         <td class="ellipsis">{{ m.descripcion || '—' }}</td>
 <!--        <td>{{ m.user_id ?? '—' }}</td>-->
@@ -84,6 +96,15 @@
               </div>
               <div class="col-12 col-sm-6">
                 <q-input v-model="form.docente" dense outlined label="Docente"/>
+              </div>
+<!--              abreviatura-->
+              <div class="col-12 col-sm-6">
+                <q-input v-model="form.abreviatura" dense outlined label="Abreviatura"/>
+              </div>
+<!--              color-->
+              <div class="col-12 col-sm-6">
+                <q-input v-model="form.color" type="color" dense outlined label="Color"/>
+<!--                <pre>{{form.color}}</pre>-->
               </div>
               <div class="col-12">
                 <q-input v-model="form.descripcion" type="textarea" autogrow dense outlined label="Descripción"/>

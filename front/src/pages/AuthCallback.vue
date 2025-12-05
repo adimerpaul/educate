@@ -26,12 +26,16 @@ export default {
       .then(({ data }) => {
         this.$store.isLogged = true
         this.$store.user = data || {}
-        // token locals storage
-        localStorage.setItem('tokenEducate', token) // usa tu clave preferida
+        localStorage.setItem('tokenEducate', token)
         this.$axios.defaults.headers.common.Authorization = `Bearer ${token}`
-        // this.$store.permissions = (data?.permissions || []).map(p => p.name || p)
         this.$alert.success(`¡Bienvenido, ${data.name || 'usuario'}!`)
-        this.$router.replace('/')
+
+        // SI NO HA COMPLETADO EL WIZARD → /configuracion
+        if (!data.onboarding_completed) {
+          this.$router.replace('/configuracion')
+        } else {
+          this.$router.replace('/')
+        }
       })
       .catch(() => {
         // si /me falla igual seguimos (ya hay token)
