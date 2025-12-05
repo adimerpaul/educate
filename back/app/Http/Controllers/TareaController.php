@@ -39,6 +39,7 @@ class TareaController extends Controller
             $request->merge(['user_id' => $user->id]);
         }
         $tarea = Tarea::create($request->all());
+//        Tarea::create($request->all() + ['user_id' => $request->user()->id]);
         return response()->json($tarea->load('materia'), 201);
     }
 

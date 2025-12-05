@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\StudyEventController;
 use App\Http\Controllers\TareaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::apiResource('materias', App\Http\Controllers\MateriaController::class);
     Route::apiResource('tareas', App\Http\Controllers\TareaController::class);
+    Route::apiResource('study-events', StudyEventController::class);
 
     // PERFIL
     Route::get('/profile/me', [App\Http\Controllers\ProfileController::class, 'me']);

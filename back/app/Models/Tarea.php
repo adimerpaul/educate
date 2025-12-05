@@ -17,6 +17,15 @@ class Tarea extends Model
         'fecha_creacion',
         'estado',
         'user_id',
+
+        // nuevos campos
+        'tiempo_estimado',
+        'prioridad',
+        'fecha_planificada',
+        'hora_inicio_plan',
+        'hora_fin_plan',
+        'descanso_duracion',
+        'descanso_cada',
     ];
 
     protected $hidden = [
