@@ -19,7 +19,7 @@
             dense
             icon="schedule"
           >
-            <span class="text-subtitle2"><b>Educate</b> · Web</span>
+            <span class="text-subtitle2"><b>REGULATE</b> · Web</span>
           </q-chip>
         </div>
 
@@ -67,7 +67,7 @@
 
         <!-- Footer -->
         <div class="text-center text-caption text-grey-7">
-          © {{ year }} Educate · Web. Todos los derechos reservados.
+          © {{ year }} REGULATE · Web. Todos los derechos reservados.
         </div>
       </q-card>
     </q-page>
@@ -77,7 +77,7 @@
 
 <script>
 export default {
-  name: 'LoginEducate',
+  name: 'LoginREGULATE',
   data () {
     return {
       loading: false,

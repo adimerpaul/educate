@@ -15,7 +15,7 @@
         <div class="row items-center q-gutter-sm">
           <!-- TÍTULO CAMBIADO -->
           <div class="text-subtitle1 text-weight-medium" style="line-height: 0.9">
-            Educate · Panel <br>
+            REGULATE · Panel <br>
             <q-badge color="warning" text-color="black" v-if="roleText" class="text-bold">{{ roleText }}</q-badge>
           </div>
         </div>
@@ -68,7 +68,7 @@
           <q-avatar size="64px" class="q-mb-sm bg-white" rounded>
             <q-img src="/logo.png" width="90px" />
           </q-avatar>
-          <div class="text-weight-bold text-white">Educate</div>
+          <div class="text-weight-bold text-white">REGULATE</div>
           <div class="text-caption text-white">Sistema Educativo</div>
         </q-item-label>
 
@@ -121,10 +121,10 @@
         <!-- FOOTER DEL DRAWER CAMBIADO A EDUCATE -->
         <div class="q-pa-md">
           <div class="text-white-7 text-caption">
-            Educate v{{ $version }}
+            REGULATE v{{ $version }}
           </div>
           <div class="text-white-7 text-caption">
-            © {{ new Date().getFullYear() }} Educate · Web
+            © {{ new Date().getFullYear() }} REGULATE · Web
           </div>
         </div>
 
