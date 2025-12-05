@@ -104,6 +104,19 @@
             <q-item-label class="text-white">Tareas</q-item-label>
           </q-item-section>
         </q-item>
+<!--        <q-item clickable to="/configuracion">-->
+<!--          <q-item-section avatar><q-icon name="settings" /></q-item-section>-->
+<!--          <q-item-section>Configuración</q-item-section>-->
+<!--        </q-item>-->
+        <q-separator class="q-my-sm" />
+        <q-item dense to="/configuracion" exact clickable class="menu-item" active-class="menu-active" v-close-popup>
+          <q-item-section avatar>
+            <q-icon name="person" class="text-white"/>
+          </q-item-section>
+          <q-item-section>
+            <q-item-label class="text-white">Perfil</q-item-label>
+          </q-item-section>
+        </q-item>
 
         <!-- FOOTER DEL DRAWER CAMBIADO A EDUCATE -->
         <div class="q-pa-md">

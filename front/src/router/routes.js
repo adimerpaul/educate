@@ -7,7 +7,12 @@ const routes = [
       { path: 'auth/callback', component: () => import('pages/AuthCallback.vue') },
       { path: 'configuracion', component: () => import('pages/ConfigWizard.vue'), meta: { requiresAuth: true } },
       { path: '/materias', component: () => import('pages/materias/Materias.vue') },
-      { path: '/tareas', component: () => import('pages/tareas/Tareas.vue') }
+      { path: '/tareas', component: () => import('pages/tareas/Tareas.vue') },
+      {
+        path: '/configuracion',
+        component: () => import('pages/ProfileSettingsPage.vue'),
+        meta: { requiresAuth: true }
+      }
     ]
   },
   {
