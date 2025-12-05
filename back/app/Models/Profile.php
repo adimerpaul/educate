@@ -5,17 +5,26 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Materia extends Model
+class Profile extends Model
 {
     use SoftDeletes;
 
     protected $fillable = [
-        'nombre',
-        'abreviatura',   // NUEVO
-        'docente',
-        'color',
-        'descripcion',
         'user_id',
+        'nombre',
+        'apellidos',
+        'username',
+        'fecha_nacimiento',
+        'genero',
+        'pais',
+        'estado_provincia',
+        'tipo_centro',
+        'nombre_centro',
+        'etapa',
+        'curso',
+        'clase_letra',
+        'minutos_descanso',
+        'minutos_estudio_max',
     ];
 
     protected $hidden = [

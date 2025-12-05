@@ -123,4 +123,13 @@ class UserController extends Controller{
             'permissions' => $user->permissions()->pluck('name'),
         ]);
     }
+    public function completeOnboarding(Request $request)
+    {
+        $user = $request->user();
+        $user->onboarding_completed = true;
+        $user->save();
+
+        return $user;
+    }
+
 }

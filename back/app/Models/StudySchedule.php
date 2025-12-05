@@ -5,17 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Materia extends Model
+class StudySchedule extends Model
 {
     use SoftDeletes;
 
     protected $fillable = [
-        'nombre',
-        'abreviatura',   // NUEVO
-        'docente',
-        'color',
-        'descripcion',
         'user_id',
+        'dia_semana',
+        'tipo',
+        'hora_inicio',
+        'hora_fin',
     ];
 
     protected $hidden = [
