@@ -66,28 +66,28 @@
             </div>
 
             <div class="col-12 col-md-4">
-              <q-input v-model="profile.estado_provincia" label="Estado / Provincia" dense outlined />
+              <q-input v-model="profile.estado_provincia" label="Departamento" dense outlined />
             </div>
 
             <div class="col-12 col-md-4">
-              <q-input v-model="profile.tipo_centro" label="Tipo centro" dense outlined />
+              <q-input v-model="profile.tipo_centro" label="Ciudad" dense outlined />
             </div>
 
             <div class="col-12 col-md-4">
-              <q-input v-model="profile.nombre_centro" label="Nombre centro" dense outlined />
+              <q-input v-model="profile.nombre_centro" label="Nombre Universidad" dense outlined />
             </div>
 
             <div class="col-12 col-md-4">
-              <q-input v-model="profile.etapa" label="Etapa" dense outlined />
+              <q-input v-model="profile.etapa" label="Gestión Año/Semestre" dense outlined />
             </div>
 
             <div class="col-12 col-md-4">
               <q-input v-model="profile.curso" label="Curso" dense outlined />
             </div>
 
-            <div class="col-12 col-md-4">
-              <q-input v-model="profile.clase_letra" label="Clase" dense outlined />
-            </div>
+<!--            <div class="col-12 col-md-4">-->
+<!--              <q-input v-model="profile.clase_letra" label="Clase" dense outlined />-->
+<!--            </div>-->
 
           </div>
         </div>
@@ -283,8 +283,8 @@ export default {
       },
 
       columnsMaterias: [
-        { name: 'nombre', label: 'Materia', field: 'nombre', align: 'left' },
-        { name: 'abreviatura', label: 'Abrev.', field: 'abreviatura', align: 'left' },
+        { name: 'nombre', label: 'Nombre Materia', field: 'nombre', align: 'left' },
+        { name: 'abreviatura', label: 'Sigla.', field: 'abreviatura', align: 'left' },
         { name: 'acciones', label: '', align: 'right' }
       ],
 
