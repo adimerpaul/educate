@@ -16,17 +16,17 @@ class GoogleController extends Controller{
     }
     function callback(){
         $googleUser = Socialite::driver('google')->stateless()->user();
-        $user  = User::updateOrCreate(
-            [
-                'google_id' => $googleUser->getId(),
-            ],
-            [
-                'name' => $googleUser->getName(),
-                'email' => $googleUser->getEmail(),
-                'avatar' => $googleUser->getAvatar(),
-            ]
-        );
-        $this->downloadAndStoreAvatar($user, $googleUser->getAvatar());
+        error_log('Google User: ' . json_encode($googleUser->id));
+        $user = User::where('google_id', $googleUser->id)->first();
+        if(!$user){
+            $user  = new User();
+            $user->google_id = $googleUser->id;
+            $user->name = $googleUser->name;
+            $user->email = $googleUser->email;
+            $user->password = bcrypt(bin2hex(random_bytes(16)));
+            $user->save();
+            $this->downloadAndStoreAvatar($user, $googleUser->getAvatar());
+        }
         $token = $user->createToken('auth_token')->plainTextToken;
         $urlFrontend = env('FRONTEND_URL', 'http://localhost:9000');
         return redirect("{$urlFrontend}/auth/callback?token={$token}");

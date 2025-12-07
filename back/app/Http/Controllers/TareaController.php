@@ -13,6 +13,7 @@ class TareaController extends Controller
         $q          = $request->get('q');
         $materiaId  = $request->get('materia_id');
         $estado     = $request->get('estado');
+        $user      = $request->user();
 
         $tareas = Tarea::with(['materia'])
             ->when($materiaId, fn($qry) => $qry->where('materia_id', $materiaId))
@@ -26,6 +27,7 @@ class TareaController extends Controller
                 });
             })
             ->orderBy('id', 'desc')
+            ->where('user_id', $user->id)
             ->get();
 
         return response()->json($tareas);

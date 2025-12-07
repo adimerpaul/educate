@@ -11,6 +11,7 @@ class MateriaController extends Controller
     public function index(Request $request)
     {
         $q = $request->get('q');
+        $user = $request->user();
         $materias = Materia::when($q, function ($query) use ($q) {
             $t = "%{$q}%";
             $query->where('nombre', 'like', $t)
@@ -18,6 +19,7 @@ class MateriaController extends Controller
                 ->orWhere('docente', 'like', $t);
         })
             ->orderBy('id', 'desc')
+            ->where('user_id', $user->id)
             ->get();
 
         return response()->json($materias);

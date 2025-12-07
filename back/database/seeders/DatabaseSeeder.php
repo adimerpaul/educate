@@ -16,26 +16,26 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-            $userAdmin = User::create([
-                'name' => 'Admin User',
-                'username' => 'admin',
-                'role' => 'Administrador',
-                'avatar' => 'default.png',
-                'email' => '',
-                'password' => 'admin123Admin',
-            ]);
-            $permisos = [
-                'Usuarios',
-                'Insumos',
-                'Productos',
-                'Clientes',
-                'Ventas',
-                'Compras',
-                'Reportes',
-            ];
-            foreach ($permisos as $permiso) {
-                Permission::create(['name' => $permiso]);
-            }
-            $userAdmin->givePermissionTo(Permission::all());
+//            $userAdmin = User::create([
+//                'name' => 'Admin User',
+//                'username' => 'admin',
+//                'role' => 'Administrador',
+//                'avatar' => 'default.png',
+//                'email' => '',
+//                'password' => 'admin123Admin',
+//            ]);
+//            $permisos = [
+//                'Usuarios',
+//                'Insumos',
+//                'Productos',
+//                'Clientes',
+//                'Ventas',
+//                'Compras',
+//                'Reportes',
+//            ];
+//            foreach ($permisos as $permiso) {
+//                Permission::create(['name' => $permiso]);
+//            }
+//            $userAdmin->givePermissionTo(Permission::all());
     }
 }
