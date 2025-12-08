@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CalendarEventController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\StudyEventController;
 use App\Http\Controllers\TareaController;
@@ -34,4 +35,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // COMPLETAR ONBOARDING
     Route::post('/onboarding/complete', [App\Http\Controllers\UserController::class, 'completeOnboarding']);
+
+    Route::get('/calendar/events', [CalendarEventController::class, 'index']);
+
 });
