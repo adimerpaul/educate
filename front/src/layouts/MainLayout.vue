@@ -117,6 +117,19 @@
             <q-item-label class="text-white">Perfil</q-item-label>
           </q-item-section>
         </q-item>
+<!--        {-->
+<!--        path: 'calendario',-->
+<!--        component: () => import('pages/calendar/CalendarPage.vue'),-->
+<!--        meta: { requiresAuth: true }-->
+<!--        }-->
+        <q-item dense to="/calendario" exact clickable class="menu-item" active-class="menu-active" v-close-popup>
+          <q-item-section avatar>
+            <q-icon name="calendar_today" class="text-white"/>
+          </q-item-section>
+          <q-item-section>
+            <q-item-label class="text-white">Calendario</q-item-label>
+          </q-item-section>
+        </q-item>
 
         <!-- FOOTER DEL DRAWER CAMBIADO A EDUCATE -->
         <div class="q-pa-md">
